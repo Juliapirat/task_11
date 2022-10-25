@@ -16,5 +16,5 @@ export default function useMapbox(
       center: center,
       zoom: zoom
     });
-  }, [center, container, zoom]);
+  }, []);
 }
