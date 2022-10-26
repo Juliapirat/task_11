@@ -4,8 +4,14 @@ import useMapbox from "./useMapbox.js";
 import "./tailwind.output.css";
 
 function App() {
-  const [random, setRandom] = useState(Math.random());
-  useMapbox("map", [30, 52]);
+  const [, setRandom] = useState(Math.random());
+
+  let container = "map";
+  let center = [21, 21];
+  let zoom;
+  let [long = 0, lat = 0] = center;
+
+  useMapbox(container, [long, lat], zoom);
   return (
     <div className="min-h-screen bg-gray-100 ml-100">
       <div className="flex  flex-col items-center justify-center">
